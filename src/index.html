@@ -1,0 +1,29 @@
+<html lang="en-US">
+
+<head>
+    <title>Currency Exchange</title>
+    <script src="exchange_service.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Get exchange rate in 5 countries.</h1>
+        <p>To get the current exchange rate for a location, please choose a currency.
+
+        <form id="currencyExchange">
+            <label for="City">Choose a currency:</label>
+            <select id="currency">
+                <option value="GBP"> British Pounds</option>
+                <option value="CAD"> Canadian Dollars</option>
+                <option value="EUR"> Euros</option>
+                <option value="JPY"> Japanese Yen</option>
+                <option value="DOP"> Dominican Peso</option>
+            </select>
+            <button type="submit" class="btn-success" id="exchangeRate">Get Current exchange rate</button>
+        </form>
+        <p id="showResponse"></p>
+    </div>
+</body>
+
+</html>
