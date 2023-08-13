@@ -27,17 +27,16 @@ This application determins USD currency exchange rate in DOP,GBP, CAD,EUR,and JP
 
 * You must get your own API Key. Go to https://www.exchangerate-api.com/ and create an account. Click "get free key"
 
-Keep your key is private! To do this read below. 
+Keep your key private! To do this read below. 
 
 * Create a .env file in your root directory. This is where you will store your sensitive variables. Write your key here in this format. API_KEY=your key
 
 *Run npm install dotenv-webpack@2.0.0 --save-dev
 This will make your senstive variables available in your application. 
 
-In your .gitignore file include the .env file. And push to github first! Before any other files. This will ensure that any senstive variables (your key) will not be exposed to the public. 
+In your .gitignore file include the .env file and push to github first! Before any other files. This will ensure that any senstive variables (your key) will not be exposed to the public. 
 
 *Anywhere that you use your API key in your application, call it in the following format. ${process.env.API_KEY}
-This will keep your key private. 
 
 * Enjoy!
 
