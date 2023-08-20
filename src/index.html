@@ -12,14 +12,16 @@
         <p>To get the current exchange rate for a location, please choose a currency.
 
         <form id="currencyExchange">
-            <label for="City">Choose a currency:</label>
+            <label for="amount">Enter amount:</label>
+            <input type="text" id="amount"><br>
+            <label for="currency">Choose a currency:</label>
             <select id="currency">
                 <option value="GBP"> British Pounds</option>
                 <option value="CAD"> Canadian Dollars</option>
                 <option value="EUR"> Euros</option>
                 <option value="JPY"> Japanese Yen</option>
                 <option value="DOP"> Dominican Peso</option>
-            </select>
+            </select><br>
             <button type="submit" class="btn-success" id="exchangeRate">Get Current exchange rate</button>
         </form>
         <p id="showResponse"></p>

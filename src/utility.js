@@ -1,14 +1,18 @@
+/*import ExchangeService from './js/exchange_service.js'
+
 
 
 window.addEventListener("load", function () {
-    this.document.querySelector('button').addEventListener("click", function () {
-        let currency = document.getElementById("currency");
-        let exchange = new ExchangeService();
+  console.log("load");
+  this.document.querySelector('button').addEventListener("click", function () {
+    let currency = document.getElementById("currency").value;
+    console.log(currency);
+    /*let exchange = new ExchangeService();
         let rate = exchange.getData(currency);
-    })
+        console.log(rate)
+        
+  });
 }
-)
+);
 
-function getData() {
-    const url = `https://v6.exchangerate-api.com/v6/{process.env.API_KEY}`
-}
+*/

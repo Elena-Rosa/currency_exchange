@@ -1,5 +1,5 @@
 {
-  "name": "Solar Age",
+  "name": "Currency_Exchange",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -21,7 +21,7 @@
     "eslint": "^8.18.0",
     "eslint-webpack-plugin": "^2.7.0",
     "html-webpack-plugin": "^4.5.2",
-    "jest": "^24.9.0",
+    "jest": "^29.9.0",
     "style-loader": "^1.3.0",
     "webpack": "4.46.0",
     "webpack-cli": "^3.3.12",

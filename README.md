@@ -34,11 +34,12 @@ Keep your key private! To do this read below.
 *Run npm install dotenv-webpack@2.0.0 --save-dev
 This will make your senstive variables available in your application. 
 
-In your .gitignore file include the .env file and push to github first! Before any other files. This will ensure that any senstive variables (your key) will not be exposed to the public. 
+In your .gitignore file include the .env file. This will ensure that any senstive variables (your key) will not be pushed to gitHub and exposed to the public. 
 
 *Anywhere that you use your API key in your application, call it in the following format. ${process.env.API_KEY}
 
 * Enjoy!
+
 
 
 ## Known Bugs
