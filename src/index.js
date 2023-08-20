@@ -1,9 +1,21 @@
 //import 'bootstrap';
 //import 'bootstrap/dist/css/bootstrap.min.css';
-//import './css/styles.css';
-//import ExchangeService from './js/exchange_service.js'
+import './css/styles.css';
+import ExchangeService from './js/exchange_service.js'
 
 
+function getData(currency) {
+  ExchangeService.getData(currency)
+    .then(function (response) {
+      if (response.main) {
+        printElements(response, currency);
+      } else {
+        printError(response, currency);
+      }
+    });
+}
+
+// UI Logic
 
 function printError(request, currency) {
   document.querySelector('#showResponse').innerText = `There was an error accessing the exchange data for your currency:  ${request.status} ${request.statusText}`;
@@ -18,7 +30,6 @@ request.addEventListener("load", function () {
   }
 });
 
-
 window.addEventListener("load", function () {
   this.document.querySelector('button').addEventListener("click", function () {
     event.preventDefault();
@@ -28,23 +39,3 @@ window.addEventListener("load", function () {
   });
 }
 );
-function getData(exchange_id, amount) {
-  fetch("https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD")
-    .then(function (response) {
-      if (!response.ok) {
-        throw Error(response.statusText);
-      } else {
-        response.json().then(function (data) {
-          let rate = data.conversion_rates[exchange_id];
-          let convertedAmount = amount * rate;
-          document.getElementById("showResponse").innerHTML = "Converted amount: " + convertedAmount.toFixed(2);
-        });
-
-
-      }
-    })
-    .catch(function (error) {
-      return error;
-    });
-}
-
