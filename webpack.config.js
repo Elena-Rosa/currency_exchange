@@ -8,31 +8,29 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
     },
     devtool: 'eval-source-map',
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
     },
     plugins: [
+        new Dotenv(),
         new ESLintPlugin(),
         new CleanWebpackPlugin(),
-        new Dotenv()
         new HtmlWebpackPlugin({
-            title: 'currency_exchange',
+            title: 'Currency Exchange',
             template: './src/index.html',
-            inject: 'body'
-        })
+            inject: 'body',
+        }),
     ],
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
-            }
-        ]
-    }
+                use: ['style-loader', 'css-loader'],
+
+            },
+        ],
+    },
 };
